@@ -7,14 +7,15 @@ public class Contador {
     public static void main(String[] args) {
         Scanner terminal = new Scanner(System.in);
 
-        int parametroUm = terminal.nextInt(),
-            parametroDois = terminal.nextInt();
+        System.out.print("Informe o primeiro número: ");
+        int parametroUm = terminal.nextInt();
+        System.out.print("Informe o segundo número: ");
+        int parametroDois = terminal.nextInt();
 
         try {
             contar(parametroUm, parametroDois);
         } catch (ParametrosInvalidosException e) {
             System.out.println("O segundo parâmetro deve ser maior que o primeiro");
-            e.printStackTrace();
         }
 
         terminal.close();
